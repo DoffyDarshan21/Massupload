@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="aurora">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rebate Formatter Studio</title>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<body>
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+
+  <header class="app-header">
+    <div>
+      <h1>Rebate Formatter Studio</h1>
+      <p>Upload CSV files, generate header + lumpsum rows, and download formatted output.</p>
+    </div>
+    <div class="theme-picker-wrap">
+      <label for="themePicker">Theme</label>
+      <select id="themePicker">
+        <option value="aurora">Aurora</option>
+        <option value="graphite">Graphite</option>
+        <option value="oceanic">Oceanic</option>
+        <option value="sunset">Sunset</option>
+        <option value="mint">Mint</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="card upload-card">
+      <h2>Upload Files</h2>
+      <p class="muted">Drag and drop one or many CSV files below.</p>
+
+      <label id="dropZone" class="dropzone" for="fileInput">
+        <input id="fileInput" type="file" accept=".csv" multiple />
+        <div>
+          <strong>Drop CSV files here</strong>
+          <span>or click to browse</span>
+        </div>
+      </label>
+
+      <div id="selectedFiles" class="selected-files"></div>
+
+      <div class="action-row">
+        <button id="processBtn" class="btn primary">Process Files</button>
+        <button id="previewBtn" class="btn ghost">Show UI Sample Data</button>
+      </div>
+    </section>
+
+    <section class="card metrics-card">
+      <h2>Run Summary</h2>
+      <div class="metrics-grid" id="metricsGrid">
+        <article>
+          <h3>Files</h3>
+          <p id="metricFiles">0</p>
+        </article>
+        <article>
+          <h3>Headers</h3>
+          <p id="metricHeaders">0</p>
+        </article>
+        <article>
+          <h3>Lumpsum Lines</h3>
+          <p id="metricLumpsum">0</p>
+        </article>
+        <article>
+          <h3>Output Rows</h3>
+          <p id="metricRows">0</p>
+        </article>
+      </div>
+      <div id="statusBox" class="status-box">Ready.</div>
+    </section>
+  </main>
+
+  <section class="card results-card">
+    <div class="results-header">
+      <h2>File Details</h2>
+      <small>Includes processing time, rebate groups, and download links.</small>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Input File</th>
+            <th>Distinct Rebates</th>
+            <th>Headers</th>
+            <th>Lumpsum</th>
+            <th>Output Rows</th>
+            <th>Time (ms)</th>
+            <th>Download</th>
+          </tr>
+        </thead>
+        <tbody id="resultsBody">
+          <tr><td colspan="7" class="muted">No processed files yet.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p>Production-ready logging is available in <code>/logs/app.log</code>.</p>
+  </footer>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

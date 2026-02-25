@@ -1,0 +1,4 @@
+2026-02-25 14:43:40,292 | INFO | rebate_processor | Uploaded file saved: name=MMHolidayPromo2025GoldCanyonBillingsforuploadformating.csv size_bytes=60917
+2026-02-25 14:43:40,357 | INFO | rebate_processor | File processed successfully file=MMHolidayPromo2025GoldCanyonBillingsforuploadformating.csv output=processed-b64f2332-MMHolidayPromo2025GoldCanyonBillingsforuploadformating.csv rows_in=491 rows_out=494 elapsed_ms=72.64
+2026-02-25 14:44:49,581 | INFO | rebate_processor | Uploaded file saved: name=MMHolidayPromo2025SupplierBillingsforuploadformating.csv size_bytes=246918
+2026-02-25 14:44:49,643 | INFO | rebate_processor | File processed successfully file=MMHolidayPromo2025SupplierBillingsforuploadformating.csv output=processed-85fa7cbb-MMHolidayPromo2025SupplierBillingsforuploadformating.csv rows_in=492 rows_out=514 elapsed_ms=65.6
